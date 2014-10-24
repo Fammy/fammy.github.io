@@ -2,5 +2,5 @@
 	path = xamarin
 	url = https://github.com/Fammy/IntroToXamarinPresentation.git
 [submodule "AsyncAwaitPresentation"]
-	path = AsyncAwaitPresentation
+	path = async
 	url = https://github.com/Fammy/AsyncAwaitPresentation.git
