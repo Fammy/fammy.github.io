@@ -4,3 +4,6 @@
 [submodule "async"]
 	path = async
 	url = https://github.com/Fammy/AsyncAwaitPresentation.git
+[submodule "game"]
+	path = game
+	url = https://github.com/Fammy/GameJSPresentation
