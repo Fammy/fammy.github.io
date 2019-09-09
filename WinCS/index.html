@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Circa 2005 - Go easy -->
+
+<head>
+    <title>Windows CS</title>
+    <link type="text/css" href="style.css" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="script.js"> </script>
+    <script type="text/javascript">
+        var menuExpanded = false;
+        var buttonClicked = false;
+        var menuClicked = false;
+        var browserOpen = false;
+        var programs1Expanded = false;
+        var programs1Clicked = false;
+    </script>
+</head>
+
+<body onload="Go();" onclick="HandleBodyClick();">
+    <div id="boot">
+        <div id="bootlogo"><img src="bootlogo.gif" alt="Logo" width="246" height="174" /></div>
+        <div id="throbber"><img src="throbber.gif" alt="Progress" width="126" height="15" /></div>
+        <div id="bootcopyright"><img src="bootcopyright.gif" alt="Copyright" width="132" height="26" /></div>
+        <div id="bootmicrosoft"><img src="bootmicrosoft.gif" alt="Microsoft" width="73" height="13" /></div>
+    </div>
+    <div id="winxp" style="display: none;">
+        <div id="mycomputer"><img src="mycomputer.png" alt="My Computer"
+                title="Shows the disk drives and hardware connected to this computer." /></div>
+        <div id="mynetworkplaces"><img src="mynetworkplaces.png" alt="My Network Places"
+                title="Shows shortcuts to Web sites, network computers, and FTP sites." /></div>
+        <div id="mydocuments"><img src="mydocuments.png" alt="My Documents" title="Contains letters, reports, and other documents and files." />
+        </div>
+        <div id="recyclebin"><img src="recyclebin.png" alt="Recycle Bin" title="Contains the files and folders you have deleted." /></div>
+        <div id="taskbar">
+            <div id="startbutton" onmouseover="if(!menuExpanded)ReplaceImage('start', 'startover.png');"
+                onmouseout="if(!menuExpanded)ReplaceImage('start', 'start.png');"
+                onclick="if(!menuExpanded){Show('startmenu');ReplaceImage('start', 'startactive.png');menuExpanded=true;buttonClicked=true;}">
+                <img id="start" alt="Start" src="start.png" title="Click here to begin" />
+            </div>
+            <div id="quicklaunch">
+                <div class="icon"><img src="showdesktopicon.png" alt="Show Desktop" title="Show Desktop" /></div>
+                <div class="icon"><img src="mydocumentsicon.png" alt="My Documents" title="My Documents" /></div>
+                <div class="icon" onclick="ShowBrowser();"><img src="firefoxicon.png" alt="Firefox" title="Firefox" /></div>
+                <div class="icon"><img src="ieicon.png" alt="Internet Explorer" title="Internet Explorer" /></div>
+                <div class="icon"><img src="trillianicon.png" alt="Trillian" title="Trillian" /></div>
+                <div class="icon"><img src="jediticon.png" alt="jEdit" title="jEdit" /></div>
+                <div class="icon"><img src="remotedesktopicon.png" alt="Remote Desktop" title="Remote Desktop" />
+                </div>
+                <div class="icon"><img src="calcicon.png" alt="Calculator" title="Calculator" /></div>
+                <div class="icon"><img src="notepadicon.png" alt="Notepad" title="Notepad" /></div>
+                <div class="icon"><img src="gimpicon.png" alt="GIMP 2" title="GIMP 2" /></div>
+            </div>
+            <div id="taskbarright">
+                <div id="clock">
+                    <span id="time">12:00 AM</span><br />
+                    <span id="dayofweek">Monday</span><br />
+                    <span id="date">3/13/2005</span>
+                </div>
+            </div>
+        </div>
+        <div id="startmenu" style="display: none;" onclick="menuClicked=true;">
+            <div id="major">
+                <div class="majoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');" onclick="ShowBrowser();menuExpanded=false;"><img alt="Mozilla Firefox"
+                        src="iconfirefox.gif" width="16" height="16" />Mozilla Firefox</div>
+            </div>
+            <div id="minor">
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="Command Prompt" src="iconcmd.gif" width="16" height="16" />Command Prompt</div>
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="Minesweeper" src="iconmine.gif" width="16" height="16" />Minesweeper</div>
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="Calculator" src="iconcalc.gif" width="16" height="16" />Calculator</div>
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="System Information" src="iconsysinfo.gif" width="16" height="16" />System Information
+                </div>
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="Notepad" src="iconnotepad.gif" width="16" height="16" />Notepad</div>
+                <div class="minoritem" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');">
+                    <img alt="jEdit" src="iconjedit.gif" width="16" height="16" />jEdit</div>
+            </div>
+            <div id="allprograms" onmouseover="SetRowColor(this, '#316ac5', '#ffffff');Show('programs1');programs1Expanded=true;"
+                onmouseout="SetRowColor(this, '#ffffff', '#333333');">All <span style="text-decoration: underline;">P</span>rograms<img
+                    alt="Green Arrow" src="greenarrow.gif" width="16" height="24" /></div>
+            <div id="programs1" style="display: none;" onclick="programs1Clicked=true;">
+                <div onmouseover="SetRowColor(this, '#316ac5', '#ffffff');SetBgImage(this, 'startmenuarrowover.gif');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');SetBgImage(this, 'startmenuarrow.gif');"><img src="startmenufolder.gif"
+                        alt="Accessories" class="startfolder" width="16" height="16" />Accessories</div>
+                <div onmouseover="SetRowColor(this, '#316ac5', '#ffffff');SetBgImage(this, 'startmenuarrowover.gif');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');SetBgImage(this, 'startmenuarrow.gif');"><img src="startmenufolder.gif"
+                        alt="Applications" class="startfolder" width="16" height="16" />Applications</div>
+                <div onmouseover="SetRowColor(this, '#316ac5', '#ffffff');SetBgImage(this, 'startmenuarrowover.gif');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');SetBgImage(this, 'startmenuarrow.gif');"><img src="startmenufolder.gif"
+                        alt="Games" class="startfolder" width="16" height="16" />Games</div>
+                <div onmouseover="SetRowColor(this, '#316ac5', '#ffffff');SetBgImage(this, 'startmenuarrowover.gif');"
+                    onmouseout="SetRowColor(this, '#ffffff', '#333333');SetBgImage(this, 'startmenuarrow.gif');"><img src="startmenufolder.gif"
+                        alt="Startup" class="startfolder" width="16" height="16" />Startup</div>
+            </div>
+        </div>
+        <div id="browser" style="display: none;"></div>
+        <div id="browsercontent" style="display: none;">
+            <iframe src="about.html" frameborder="0" width="100%" height="100%" id="browserframe" name="browserframe"></iframe>
+        </div>
+        <div id="browserinput" style="display: none;">
+            <form onsubmit="return Navigate(this.url.value);" action=".">
+                <input id="url" name="url" value="http://www.famularo.org/WinCS/about.html" />
+            </form>
+        </div>
+        <div id="browsertask" style="display: none;"></div>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-22035260-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

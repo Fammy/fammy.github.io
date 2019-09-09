@@ -1,9 +1,9 @@
 [submodule "xamarin"]
-	path = xamarin
+	path = presentations/xamarin
 	url = https://github.com/Fammy/IntroToXamarinPresentation.git
 [submodule "async"]
-	path = async
+	path = presentations/async
 	url = https://github.com/Fammy/AsyncAwaitPresentation.git
 [submodule "game"]
-	path = game
+	path = presentations/game
 	url = https://github.com/Fammy/GameJSPresentation

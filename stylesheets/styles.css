@@ -1,0 +1,99 @@
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+cover-container-wide main {
+  margin-top: 3em;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .2);
+  padding: .5em;
+  height: 100%;
+}
+
+.card img {
+  max-width: 64px;
+}
+
+.card img.card-img-full {
+  max-width: 100%;
+}
+
+.card .feather {
+  width: 20px;
+  height: 20px;
+}
+
+.card p a {
+  color: rgb(0, 153, 255);
+}
+
+main .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .8);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+main .nav-link:hover,
+main .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+main .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+main .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.bg-img {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cover-container, .cover-container-wide {
+    z-index: 2;
+}
+
+.home .bg-img {
+  background-image: url(../images/home.jpg);
+}
+
+.speaking .bg-img {
+  background-image: url(../images/speaking.jpg);
+}
+
+.projects .bg-img {
+  background-image: url(../images/projects.png);
+}
+
+.contact .bg-img {
+  background-image: url(../images/contact.jpg);
+}

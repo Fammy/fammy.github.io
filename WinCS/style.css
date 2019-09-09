@@ -1,0 +1,300 @@
+body
+{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body.winxp
+{
+    background-color: #004e98;
+    text-align: left;
+}
+
+a, a img
+{
+    cursor: default;
+}
+
+#taskbar
+{
+    position: absolute;
+    background-color: #245edc;
+    background-image: url(taskbartop.png);
+    background-repeat: repeat-x;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+#taskbarright
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(taskbarright.png);
+    height: 60px;
+    width: 122px;
+}
+
+#clock
+{
+    position: relative;
+    left: 50px;
+    top: 5px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 72px;
+    line-height: 160%;
+}
+
+#mycomputer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 53px;
+}
+
+#mynetworkplaces
+{
+    position: absolute;
+    top: 0;
+    left: 84px;
+    width: 57px;
+    height: 62px;
+}
+
+#mydocuments
+{
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 72px;
+    height: 49px;
+}
+
+#recyclebin
+{
+    position: absolute;
+    bottom: 93px;
+    right: 17px;
+    width: 53px;
+    height: 50px;
+}
+
+#startmenu
+{
+    position: absolute;
+    width: 383px;
+    height: 408px;
+    bottom: 57px;
+    left: 0;
+    background-image: url(startmenu.png);
+    z-index: 100;
+}
+
+#programs1
+{
+    background-color: #ffffff;
+    background-image: url(startmenuleft.png);
+    background-repeat: repeat-y;
+    color: #000000;
+    border-top: 1px solid #55a1ff;
+    border-right: 1px solid #3481e3;
+    border-bottom: 1px solid #55a1ff;
+    position: absolute;
+    bottom: 49px;
+    left: 142px;
+    padding-left: 6px;
+}
+#programs1 div
+{
+    padding-left: 7px;
+    font-family: Tahoma;
+    font-size: 8pt;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-right: 15px;
+    text-align: left;
+    background-image: url(startmenuarrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#programs1 div img.startfolder
+{
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+#major
+{
+    position: relative;
+    top: 73px;
+    left: 10px;
+    width: 170px;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 8pt;
+    color: #333333;
+    cursor: default;
+}
+
+#major .majoritem
+{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#major .majoritem img, #minor .minoritem img
+{
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#minor
+{
+    position: relative;
+    top: 87px;
+    left: 10px;
+    width: 170px;
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: #333333;
+    cursor: default;
+}
+
+#minor .minoritem
+{
+    margin-bottom: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#allprograms
+{
+    position: relative;
+    top: 157px;
+    left: 10px;
+    width: 170px;
+    font-family: Tahoma;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    cursor: default;
+}
+
+#allprograms img
+{
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#startbutton
+{
+    width: 98px;
+}
+
+#browser
+{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 785px;
+    height: 428px;
+    background-image: url(firefox.png);
+}
+
+#browsercontent
+{
+    position: absolute;
+    top: 110px;
+    left: 54px;
+    width: 775px;
+    height: 320px;
+}
+
+#browserinput
+{
+    position: absolute;
+    top: 87px;
+    left: 385px;
+    width: 235px;
+}
+
+#browserinput form
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 235px;
+}
+
+#url
+{
+    border: 0;
+    background-color: inherit;
+    width: 235px;
+}
+
+#browsertask
+{
+    position: absolute;
+    bottom: 0;
+    left: 109px;
+    width: 160px;
+    height: 25px;
+    background-image: url(firefoxtask.png);
+}
+
+#quicklaunch
+{
+    position: relative;
+    left: 109px;
+    top: -25px;
+    width: 75%;
+}
+
+#quicklaunch .icon
+{
+    margin-right: 7px;
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+#bootcopyright
+{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+#bootmicrosoft
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#bootlogo
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 246px;
+    margin-top: 125px;
+}
+
+#throbber
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+    margin-top: 50px;
+}

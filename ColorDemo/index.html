@@ -1,0 +1,120 @@
+<!--DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"-->
+<html>
+<!-- Circa 2003 - Go easy -->
+<head>
+	<style type="text/css">
+		a {
+			color: #0000FF;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		body {
+			border: 0px;
+			background-color: #000000;
+		}
+
+		span {
+			position: absolute;
+		}
+
+		span.byline {
+			background-color: #FFFFFF;
+			color: #000000;
+			padding: 2px;
+			font-size: 8pt;
+			font-family: Arial;
+		}
+	</style>
+	<title>Demo</title>
+	<script type="text/javascript">
+		stop = false;
+		var byline;
+		var index = 1;
+
+		function Demo() {
+			// Check for cancel
+			if (stop) return;
+
+			// Check for really big index
+			if (index > 16777215) return;
+
+			// Make byline absolute top
+			byline.style.zIndex = index + 1;
+
+			// Remove after 15 elements
+			if (index > 15) {
+				var remove = document.getElementById("span" + (index - 15));
+				document.body.removeChild(remove);
+				remove = null;
+			}
+
+			var maxWidth = document.body.clientWidth - 50; //window.screen.availWidth;
+			var maxHeight = document.body.clientHeight - 20; //window.screen.availHeight;
+
+			// Random coordinates and color
+			var X1 = Math.floor(maxWidth * Math.random());
+			var X2 = Math.floor(maxWidth * Math.random());
+			var Y1 = Math.floor(maxHeight * Math.random());
+			var Y2 = Math.floor(maxHeight * Math.random());
+			var R = Math.floor(255 * Math.random());
+			var G = Math.floor(255 * Math.random());
+			var B = Math.floor(255 * Math.random());
+			var color = "rgb(" + R + "," + G + "," + B + ")";
+
+			// Create new span
+			var elem = document.createElement("span");
+			elem.id = "span" + index;
+			document.body.appendChild(elem);
+
+			// Set span style
+			elem.style.left = Math.min(X1, X2) + "px";
+			elem.style.top = Math.min(Y1, Y2) + "px";
+			elem.style.width = Math.abs(X1 - X2) + "px";
+			elem.style.height = Math.abs(Y1 - Y2) + "px";
+			elem.style.backgroundColor = color;
+			elem.style.zIndex = index;
+
+			elem = null;
+
+			// Call function again
+			setTimeout("Demo(" + ++index + ");", 75);
+		}
+
+		function Control() {
+			if (stop) {
+				stop = false;
+				document.getElementById("aControl").innerText = "Stop";
+				Demo();
+			}
+			else {
+				stop = true;
+				document.getElementById("aControl").innerText = "Start";
+			}
+		}
+	</script>
+</head>
+
+<body onload="byline=document.getElementById('spanByLine');Demo();">
+	<span class="byline" id="spanByLine">
+		Old School Color Demo (<a id="aControl" href="javascript:Control();">Stop</a>)
+	</span>
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-22035260-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+
+</html>

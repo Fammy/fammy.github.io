@@ -1,40 +1,55 @@
 <!doctype html>
-<html lang="en" class="home">
+<html lang="en" class="barcode">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Homepage of Jason Famularo">
+  <meta name="description" content="Google Chrome Barcode Generator Extension">
   <meta name="author" content="Jason Famularo">
 
-  <title>famularo.org · Jason Famularo</title>
+  <title>famularo.org · Barcode Generator extension</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheets/cover.css">
-  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="../stylesheets/cover.css">
+  <link rel="stylesheet" href="../stylesheets/styles.css">
 
   <link rel="icon" sizes="192x192" href="images/icon-192.jpg">
 </head>
 
-<body class="text-center">
+<body>
   <div class="bg-img"></div>
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="speaking.html">Speaking</a>
-          <a class="nav-link" href="projects.html">Projects</a>
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link active" href="../index.html">Home</a>
+          <a class="nav-link" href="../speaking.html">Speaking</a>
+          <a class="nav-link" href="../projects.html">Projects</a>
+          <a class="nav-link" href="../contact.html">Contact</a>
           <a class="nav-link" href="http://jason.famularo.org">Blog</a>
         </nav>
       </div>
     </header>
 
     <main role="main" class="inner cover mb-auto">
-      <h1 class="cover-heading">Hi, I'm Jason.</h1>
-      <p class="lead">I'm a software developer, husband, and father.</p>
+      <h1 class="cover-heading text-center">Barcode Generator</h1>
+      <p class="lead text-center">Quickly generate barcodes from Google Chrome.</p>
+      <h3>Change log</h3>
+      <p>
+        <ul>
+          <li>v2.1.1 - Update barcode generation logic, allow space in Code-39 barcodes.</li>
+          <li>v2.1.0 - Add button to download and save the barcode you generated.</li>
+          <li>v2.0.0 - Loads are barcodes directly in the popup. No more tabs.</li>
+          <li>v1.0.2 - Corrected issue where size was not being saved</li>
+          <li>v1.0.1 - Corrected misspelling, alphabetized dropdown of barcode types</li>
+          <li>v1.0.0 - Initial version</li>
+        </ul>
+      </p>
+      <p class="text-center">
+        <a href="https://github.com/Fammy/BarcodeExtension" class="btn btn-lg btn-secondary">
+          View Source <i data-feather="github"></i></a>
+      </p>
     </main>
   </div>
 
