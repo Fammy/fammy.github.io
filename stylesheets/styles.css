@@ -92,3 +92,12 @@ main .active {
 .contact .bg-img {
   background-image: url(../images/contact.jpg);
 }
+
+ul.stack {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.stack > li {
+  margin: 10px 0;
+}
