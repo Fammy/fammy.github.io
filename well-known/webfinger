@@ -1,0 +1,25 @@
+{
+    "subject":"acct:jfam@mastodon.social",
+    "aliases":
+    [
+        "https://mastodon.social/@jfam",
+        "https://mastodon.social/users/jfam"
+    ],
+    "links":
+    [
+        {
+            "rel":"http://webfinger.net/rel/profile-page",
+            "type":"text/html",
+            "href":"https://mastodon.social/@jfam"
+        },
+        {
+            "rel":"self",
+            "type":"application/activity+json",
+            "href":"https://mastodon.social/users/jfam"
+        },
+        {
+            "rel":"http://ostatus.org/schema/1.0/subscribe",
+            "template":"https://mastodon.social/authorize_interaction?uri={uri}"
+        }
+    ]
+}
